@@ -1,7 +1,7 @@
 from ogcserver.WMS import BaseWMSFactory
 from mapnik import *
 
-SHAPEFILE = '/home/h0st1le/webapps/template/papyrus_mapnik/shapefiles/world_borders.shp'
+SHAPEFILE = '/home/h0st1le/webapps/template/papyrus_ogcserver/shapefiles/world_borders.shp'
 PROJ4_STRING = '+proj=latlong +datum=WGS84'
 
 class WMSFactory(BaseWMSFactory):

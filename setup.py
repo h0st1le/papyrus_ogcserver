@@ -8,9 +8,9 @@ CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
 requires = ['pyramid', 'WebError', 'ogcserver']
 
-setup(name='papyrus_mapnik',
+setup(name='papyrus_ogcserver',
       version='0.1',
-      description='papyrus_mapnik',
+      description='papyrus_ogcserver',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -20,17 +20,17 @@ setup(name='papyrus_mapnik',
         ],
       author='Justin Penka',
       author_email='jpenka@gmail.com',
-      url='https://github.com/h0st1le/papyrus_mapnik',
+      url='https://github.com/h0st1le/papyrus_ogcserver',
       keywords='web geospatial papyrus mapnik ogcserver pyramid pylons',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
-      test_suite="papyrus_mapnik",
+      test_suite="papyrus_ogcserver",
       entry_points = """\
       [paste.app_factory]
-      main = papyrus_mapnik:main
+      main = papyrus_ogcserver:main
       """,
       paster_plugins=['pyramid'],
       )

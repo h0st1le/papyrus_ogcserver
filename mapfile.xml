@@ -18,7 +18,7 @@
         <StyleName>world_style</StyleName>
         <Datasource>
             <Parameter name="type">shape</Parameter>
-            <Parameter name="file">/home/h0st1le/webapps/template/papyrus_mapnik/shapefiles/world_borders.shp</Parameter>
+            <Parameter name="file">/home/h0st1le/webapps/template/papyrus_ogcserver/shapefiles/world_borders.shp</Parameter>
         </Datasource>
     </Layer>
 </Map>

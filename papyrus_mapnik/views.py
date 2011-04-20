@@ -9,7 +9,7 @@ from ogcserver.wsgi import ogcserver_map_factory, ogcserver_wms_factory
 # set default expiration time to 1 day (pulled from ogcserver.conf)
 DEFAULT_EXPIRATION = 86400
 
-# Mapnik Service instance
+# Mapnik OGCServer Service instance
 _service = None
 # Time limit for Cache expiration
 _cache_exp = None 
@@ -17,7 +17,7 @@ _cache_exp = None
 def load_ogcserver_config(settings):
     """ Load the mapnik ogcserver config.
 
-    This creates an instance of the mapnik WSGIApp and
+    This creates an instance of the mapnik ogcserver WSGIApp and
     stores the return value in a private global variable.
 
     Arguments:
@@ -42,7 +42,7 @@ def load_ogcserver_config(settings):
         _cache_exp = DEFAULT_EXPIRATION
 
 @wsgiapp
-def mapnik(environ, start_response):
+def ogcserver(environ, start_response):
 
     # custom_start_response adds cache headers to the response
     def custom_start_response(status, headers, exc_info=None):

@@ -1,24 +1,24 @@
 from pyramid.config import Configurator
 
-from papyrus_mapnik.views import load_ogcserver_config
+from papyrus_ogcserver.views import load_ogcserver_config
 
 def add_route(config):
-    """ Add a route to the mapnik view callable. The OGCService
-    service is made available at ``/mapnik``.
+    """ Add a route to the ogcserver view callable. The OGCService
+    service is made available at ``/ogcserver``.
 
     Arguments:
 
     * ``config``: the ``pyramid.config.Configurator`` object.
     """
-    return config.add_route('mapnik', '/mapnik{path:.*?}',
-                            view='papyrus_mapnik.views:mapnik'
+    return config.add_route('ogcserver', '/ogcserver{path:.*?}',
+                            view='papyrus_ogcserver.views:ogcserver'
                             )
 
 def includeme(config):
-    """ The callable making it possible to include papyrus_mapnik
+    """ The callable making it possible to include papyrus_ogcserver
     in a Pyramid application.
 
-    Calling ``config.include(papyrus_mapnik)`` will result in this
+    Calling ``config.include(papyrus_ogcserver)`` will result in this
     callable being called.
 
     Arguments:

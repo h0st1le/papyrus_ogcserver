@@ -12,16 +12,16 @@ class AddRouteTests(unittest.TestCase):
         testing.tearDown()
 
     def test(self):
-        from papyrus_mapnik import add_route
+        from papyrus_ogcserver import add_route
         route = add_route(self.config)
         from pyramid.urldispatch import Route
         self.assertTrue(isinstance(route, Route))
-        self.assertEqual(route.name, 'mapnik')
-        self.assertEqual(route.pattern, '/mapnik{path:.*?}')
+        self.assertEqual(route.name, 'ogcserver')
+        self.assertEqual(route.pattern, '/ogcserver{path:.*?}')
 
 class MainTests(unittest.TestCase):
     def test(self):
-        from papyrus_mapnik import main
+        from papyrus_ogcserver import main
         app = main({}, a='a')
         from pyramid.router import Router
         self.assertTrue(isinstance(app, Router))
